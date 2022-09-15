@@ -463,13 +463,13 @@ open class PTPopupWebView : UIView {
      - parameters:
         - buttonSetting: PTPopupWebViewButton: button setting
      */
-    open func addButton (_ buttonSetting: PTPopupWebViewButton) -> Self {
+    @objc func addButton (_ buttonSetting: PTPopupWebViewButton) -> Self {
         self.buttonSettings.append(buttonSetting)
         return self
     }
     
     /// Close popup view
-    open func close() {
+    @objc func close() {
         if let delegate = delegate {
             // if delegate != nil (ex. when use PTPopupWebViewContoller)
             delegate.close()
